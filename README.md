@@ -28,6 +28,9 @@ We allow incremental vote submissions:
 {
     "rules": {
         ".read": true,
+        "presence": {
+          ".write": true
+        },
         "$counter": {
           ".write": "!root.child($counter).exists() || ((newData.val() - data.val()) === 1) || ((newData.val() - data.val()) === -1)"
         }
@@ -37,6 +40,7 @@ We allow incremental vote submissions:
 
 ## TODO
 
-  - [] betters styles customization
+  - [ ] betters styles customization
   - [x] implement undo
-  - [] online users counter
+  - [x] online users counter
+  - [ ] create subcomponents

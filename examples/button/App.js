@@ -19,6 +19,10 @@ var App = React.createClass({
           <Count isViewCounter={true} counterText="views" firebaseHost="https://counter-button.firebaseio.com/" firebaseResourceId='views-counter'/>
         </div>
         <div>
+          <h3>Online counter demo</h3>
+          <Count isOnlineCounter={true} counterText="views" firebaseHost="https://counter-button.firebaseio.com/"/>
+        </div>
+        <div>
           <h3>Readonly counter demo</h3>
           <Count isReadonly={true} counterText="users" firebaseHost="https://counter-button.firebaseio.com/" firebaseResourceId='kudos-counter'/>
         </div>
