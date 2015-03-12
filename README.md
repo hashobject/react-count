@@ -1,6 +1,6 @@
 react-count
 ===========
-Real-time counter button react component baked by Firebase.
+Real-time counter button [React](http://facebook.github.io/react/) component baked by [Firebase](https://www.firebase.com/).
 
 
 
