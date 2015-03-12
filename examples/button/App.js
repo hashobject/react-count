@@ -23,6 +23,10 @@ var App = React.createClass({
           <Count isReadonly={true} counterText="users" firebaseHost="https://counter-button.firebaseio.com/" firebaseResourceId='kudos-counter'/>
         </div>
         <div>
+          <h3>Undoable counter demo</h3>
+          <Count isUndoable={true} actionDoText="follow" actionUndoText="unfollow" counterText="followers" firebaseHost="https://counter-button.firebaseio.com/" firebaseResourceId='kudos-counter'/>
+        </div>
+        <div>
           <h3>Custom CSS classname counter demo</h3>
           <Count className="my-classname" counterText="followers" actionDoText="follow" firebaseHost="https://counter-button.firebaseio.com/" firebaseResourceId='kudos-counter'/>
         </div>
