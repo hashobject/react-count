@@ -13,7 +13,7 @@ If you use webpack just install react-count module
 and require it anywhere in your react app:
 
 ```
-  var Kudos = require('react-count');
+  var Count = require('react-count');
 ```
 
 ## Firebase security rules
