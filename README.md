@@ -4,7 +4,7 @@ Real-time counter button [React](http://facebook.github.io/react/) component bak
 
 
 
-## Installation
+## Install
 
 If you use webpack just install react-count module
 
@@ -44,3 +44,4 @@ We allow incremental vote submissions:
   - [x] implement undo
   - [x] online users counter
   - [ ] create subcomponents
+  - [ ] auth support
