@@ -6,12 +6,26 @@ var App = React.createClass({
   render: function(){
     return (
       <div>
-        <Count className="button" firebaseHost="https://counter-button.firebaseio.com/" firebaseResourceId='counter4'/>
-        <Count className="follow-button button" counterText="followers" actionText="follow" allowMultiple={true} firebaseHost="https://counter-button.firebaseio.com/" firebaseResourceId='counter6'/>
-        <Count counterText="kudos" firebaseHost="https://counter-button.firebaseio.com/" firebaseResourceId='counter7'/>
-        <Count isViewCounter={true} counterText="views" firebaseHost="https://counter-button.firebaseio.com/" firebaseResourceId='counter11'/>
-        <Count isReadonly={true} counterText="users" firebaseHost="https://counter-button.firebaseio.com/" firebaseResourceId='counter8'/>
-        <Count counterText="likes" actionText="like" firebaseHost="https://counter-button.firebaseio.com/" firebaseResourceId='counter7'/>
+        <div>
+          <h3>Multiple votes counter demo</h3>
+          <Count counterText="followers" actionDoText="follow" actionDoneText="followed" allowMultiple={true} firebaseHost="https://counter-button.firebaseio.com/" firebaseResourceId='followers-counter'/>
+        </div>
+        <div>
+          <h3>One vote counter demo</h3>
+          <Count actionDoText="do" actionDoneText="done" counterText="kudos" firebaseHost="https://counter-button.firebaseio.com/" firebaseResourceId='kudos-counter'/>
+        </div>
+        <div>
+          <h3>View counter demo</h3>
+          <Count isViewCounter={true} counterText="views" firebaseHost="https://counter-button.firebaseio.com/" firebaseResourceId='views-counter'/>
+        </div>
+        <div>
+          <h3>Readonly counter demo</h3>
+          <Count isReadonly={true} counterText="users" firebaseHost="https://counter-button.firebaseio.com/" firebaseResourceId='kudos-counter'/>
+        </div>
+        <div>
+          <h3>Custom CSS classname counter demo</h3>
+          <Count className="my-classname" counterText="followers" actionDoText="follow" firebaseHost="https://counter-button.firebaseio.com/" firebaseResourceId='kudos-counter'/>
+        </div>
       </div>
     )
   }

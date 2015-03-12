@@ -35,3 +35,8 @@ We allow incremental vote submissions:
 }
 ```
 
+## TODO
+
+  - [] betters styles customization
+  - [] implement undo
+  - [] online users counter
