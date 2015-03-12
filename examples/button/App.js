@@ -7,10 +7,11 @@ var App = React.createClass({
     return (
       <div>
         <Count className="button" firebaseHost="https://counter-button.firebaseio.com/" firebaseResourceId='counter4'/>
-        <Count className="follow-button button" text="followers" allowMultiple={true} firebaseHost="https://counter-button.firebaseio.com/" firebaseResourceId='counter6'/>
-        <Count text="kudos" firebaseHost="https://counter-button.firebaseio.com/" firebaseResourceId='counter7'/>
-        <Count readonly={true} text="users" firebaseHost="https://counter-button.firebaseio.com/" firebaseResourceId='counter8'/>
-        <Count isHoverable={true} text="likes" firebaseHost="https://counter-button.firebaseio.com/" firebaseResourceId='counter7'/>
+        <Count className="follow-button button" counterText="followers" actionText="follow" allowMultiple={true} firebaseHost="https://counter-button.firebaseio.com/" firebaseResourceId='counter6'/>
+        <Count counterText="kudos" firebaseHost="https://counter-button.firebaseio.com/" firebaseResourceId='counter7'/>
+        <Count isViewCounter={true} counterText="views" firebaseHost="https://counter-button.firebaseio.com/" firebaseResourceId='counter11'/>
+        <Count isReadonly={true} counterText="users" firebaseHost="https://counter-button.firebaseio.com/" firebaseResourceId='counter8'/>
+        <Count counterText="likes" actionText="like" firebaseHost="https://counter-button.firebaseio.com/" firebaseResourceId='counter7'/>
       </div>
     )
   }
