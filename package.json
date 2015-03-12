@@ -1,0 +1,37 @@
+{
+  "name": "react-count",
+  "version": "0.0.1",
+  "description": "React counter component with Firebase integration",
+  "main": "./lib/index",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hashobject/react-count.git"
+  },
+  "directories": {
+    "example": "examples"
+  },
+  "keywords": [
+    "react",
+    "reactjs",
+    "react-component",
+    "count",
+    "counter",
+    "firebase"
+  ],
+  "devDependencies": {
+    "jsx-loader": "^0.12.2",
+    "webpack": "^1.7.2",
+    "firebase": "^2.2.2",
+    "jsx-loader": "^0.12.2",
+    "react": "^0.12.2"
+  },
+  "author": "hashobject team (team@hashobject.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hashobject/react-count/issues"
+  },
+  "homepage": "https://github.com/hashobject/react-count"
+}
