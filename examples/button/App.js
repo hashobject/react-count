@@ -1,11 +1,13 @@
 var React = require('react');
-var Count = require('../../lib/Count.js');
+var Count = require('../../lib/Count');
+var OnlineCount = require('../../lib/OnlineCount');
 
 var App = React.createClass({
 
   render: function(){
     return (
       <div>
+        <h2>Use Count component</h2>
         <div>
           <h3>Multiple votes counter demo</h3>
           <Count counterText="followers" actionDoText="follow" actionDoneText="followed" allowMultiple={true} firebaseHost="https://counter-button.firebaseio.com/" firebaseResourceId='followers-counter'/>
@@ -32,7 +34,12 @@ var App = React.createClass({
         </div>
         <div>
           <h3>Custom CSS classname counter demo</h3>
-          <Count className="my-classname" counterText="followers" actionDoText="follow" firebaseHost="https://counter-button.firebaseio.com/" firebaseResourceId='kudos-counter'/>
+          <Count className="my-classname" counterText="followers" actionDoText="follow" actionDoneText="followed" firebaseHost="https://counter-button.firebaseio.com/" firebaseResourceId='kudos-counter'/>
+        </div>
+        <h2>Use custom components</h2>
+        <div>
+          <h3>OnlineCount demo</h3>
+          <OnlineCount counterText="views" firebaseHost="https://counter-button.firebaseio.com/"/>
         </div>
       </div>
     )
