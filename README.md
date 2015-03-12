@@ -1,5 +1,7 @@
 react-count
 ===========
+Real-time counter button react component baked by Firebase.
+
 
 
 ## Installation
