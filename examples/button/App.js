@@ -42,31 +42,38 @@ var App = React.createClass({
           </li>
           <li className="item">
             <a href="#" className="title">ViewCount component</a>
-            <p>OnlineCount component behaves as previous example but has more compact syntax.</p>
-            <ViewCount counterText="views" firebaseHost="https://counter-button.firebaseio.com/" firebaseResourceId='views-counter'/>
+            <p>ViewCount component behaves as previous example but has more compact syntax.</p>
+            <ViewCount counterText="views"
+                       firebaseHost="https://counter-button.firebaseio.com/"
+                       firebaseResourceId='another-views-counter'/>
             <div className="post">
               <pre className="brush: html">
-                &lt;ViewCount counterText=&quot;views&quot; firebaseHost=&quot;https://counter-button.firebaseio.com/&quot; firebaseResourceId=&#39;views-counter&#39;/&gt;
+                &lt;ViewCount counterText=&quot;views&quot; firebaseHost=&quot;https://counter-button.firebaseio.com/&quot; firebaseResourceId=&#39;another-views-counter&#39;/&gt;
               </pre>
             </div>
           </li>
           <li className="item">
             <a href="#" className="title">Online counter</a>
             <p>Counters display number of visitors on the page at this moment.</p>
-            <Count isOnlineCounter={true} counterText="views" firebaseHost="https://counter-button.firebaseio.com/"/>
+            <Count isOnlineCounter={true}
+                  counterText="views"
+                  firebaseHost="https://counter-button.firebaseio.com/"
+                  firebaseResourceId='online-counter'/>
             <div className="post">
               <pre className="brush: html">
-                &lt;Count isOnlineCounter=&#123;true&#125; counterText=&quot;views&quot; firebaseHost=&quot;https://counter-button.firebaseio.com/&quot;/&gt;
+                &lt;Count isOnlineCounter=&#123;true&#125; counterText=&quot;views&quot; firebaseHost=&quot;https://counter-button.firebaseio.com/&quot;/ firebaseResourceId=&#39;online-counter&#39;&gt;
               </pre>
             </div>
           </li>
           <li className="item">
             <a href="#" className="title">OnlineCount component</a>
             <p>OnlineCount component behaves as previous example but has more compact syntax.</p>
-            <OnlineCount counterText="views" firebaseHost="https://counter-button.firebaseio.com/"/>
+            <OnlineCount counterText="views"
+                         firebaseHost="https://counter-button.firebaseio.com/"
+                         firebaseResourceId='another-online-counter'/>
             <div className="post">
               <pre className="brush: html">
-                &lt;OnlineCount counterText=&quot;views&quot; firebaseHost=&quot;https://counter-button.firebaseio.com/&quot;/&gt;
+                &lt;OnlineCount counterText=&quot;views&quot; firebaseHost=&quot;https://counter-button.firebaseio.com/&quot;/ firebaseResourceId=&#39;another-online-counter&#39;&gt;
               </pre>
             </div>
           </li>
