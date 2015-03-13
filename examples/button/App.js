@@ -1,6 +1,7 @@
 var React = require('react');
 var Count = require('../../lib/Count');
 var OnlineCount = require('../../lib/OnlineCount');
+var ViewCount = require('../../lib/ViewCount');
 
 var App = React.createClass({
 
@@ -76,6 +77,16 @@ var App = React.createClass({
             <div className="post">
               <pre className="brush: html">
                 &lt;Count isUndoable=&#123;true&#125; actionDoText=&quot;follow&quot; actionUndoText=&quot;unfollow&quot; counterText=&quot;followers&quot; firebaseHost=&quot;https://counter-button.firebaseio.com/&quot; firebaseResourceId=&#39;kudos-counter&#39;/&gt;
+              </pre>
+            </div>
+          </li>
+          <li className="item">
+            <a href="#" className="title">Reverse button/text order</a>
+            <p>You can customize order of subcomponents: button and text.</p>
+            <Count isButtonLast={true} isUndoable={true} actionDoText="follow" actionUndoText="unfollow" counterText="followers" firebaseHost="https://counter-button.firebaseio.com/" firebaseResourceId='kudos-counter'/>
+            <div className="post">
+              <pre className="brush: html">
+                &lt;Count isButtonLast=&#123;true&#125; isUndoable=&#123;true&#125; actionDoText=&quot;follow&quot; actionUndoText=&quot;unfollow&quot; counterText=&quot;followers&quot; firebaseHost=&quot;https://counter-button.firebaseio.com/&quot; firebaseResourceId=&#39;kudos-counter&#39;/&gt;
               </pre>
             </div>
           </li>
