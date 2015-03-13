@@ -47,6 +47,7 @@
 	var React = __webpack_require__(3);
 	var Count = __webpack_require__(1);
 	var OnlineCount = __webpack_require__(2);
+	var ViewCount = __webpack_require__(159);
 
 	var App = React.createClass({displayName: "App",
 
@@ -122,6 +123,16 @@
 	            React.createElement("div", {className: "post"}, 
 	              React.createElement("pre", {className: "brush: html"}, 
 	                "<Count isUndoable={true} actionDoText=\"follow\" actionUndoText=\"unfollow\" counterText=\"followers\" firebaseHost=\"https://counter-button.firebaseio.com/\" firebaseResourceId='kudos-counter'/>"
+	              )
+	            )
+	          ), 
+	          React.createElement("li", {className: "item"}, 
+	            React.createElement("a", {href: "#", className: "title"}, "Reverse button/text order"), 
+	            React.createElement("p", null, "You can customize order of subcomponents: button and text."), 
+	            React.createElement(Count, {isButtonLast: true, isUndoable: true, actionDoText: "follow", actionUndoText: "unfollow", counterText: "followers", firebaseHost: "https://counter-button.firebaseio.com/", firebaseResourceId: "kudos-counter"}), 
+	            React.createElement("div", {className: "post"}, 
+	              React.createElement("pre", {className: "brush: html"}, 
+	                "<Count isButtonLast={true} isUndoable={true} actionDoText=\"follow\" actionUndoText=\"unfollow\" counterText=\"followers\" firebaseHost=\"https://counter-button.firebaseio.com/\" firebaseResourceId='kudos-counter'/>"
 	              )
 	            )
 	          )
@@ -332,18 +343,19 @@
 	        actionText = this.props.actionDoneText;
 	      }
 	    }
-	    var compOrderStyles = {};
-	    if (this.props.isButtonLast) {
-	      compOrderStyles.float = 'right';
-	      compOrderStyles.marginRight = 4;
+	    var subelements = [];
+	    var text = React.createElement("span", {className: countClassName, styles: [styles.reactCountBtnCnt, styles.reactCountCnt]}, this.state.counterValue, " ", this.props.counterText)
+	    var button = React.createElement("button", {className: btnClassName, styles: [styles.reactCountBtn, styles.reactCountBtnCnt, buttonStyle]}, actionText);
+	    if (this.props.isButtonLast === true) {
+	      subelements.push(text);
+	      subelements.push(button);
 	    } else {
-	      compOrderStyles.float = 'left';
-	      compOrderStyles.marginLeft = 4;
+	      subelements.push(button);
+	      subelements.push(text);
 	    }
 	    return (
 	      React.createElement("div", {className: className, onClick: this.handleClick, styles: styles.reactCount}, 
-	        React.createElement("button", {className: btnClassName, styles: [styles.reactCountBtn, styles.reactCountBtnCnt, buttonStyle, compOrderStyles]}, actionText), 
-	        React.createElement("span", {className: countClassName, styles: [styles.reactCountBtnCnt, styles.reactCountCnt, compOrderStyles]}, this.state.counterValue, " ", this.props.counterText)
+	        subelements
 	      )
 	    )
 	  }
@@ -387,8 +399,6 @@
 	  }
 
 	});
-
-
 
 	module.exports = OnlineCount;
 
@@ -441,7 +451,9 @@
 	    cursor: 'pointer',
 	    borderRadius: 3,
 	    transition: 'background-color 200ms ease-in',
-	    lineHeight: 1
+	    lineHeight: 1,
+	    float: 'left',
+	    marginLeft: 4
 	  }
 
 
@@ -20193,6 +20205,32 @@
 	module.exports = toArray;
 
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(33)))
+
+/***/ },
+/* 159 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	var React = __webpack_require__(3);
+	var Count = __webpack_require__(1);
+
+	var ViewCount = React.createClass({displayName: "ViewCount",
+
+	  propTypes: {
+	    firebaseHost: React.PropTypes.string.isRequired,
+	    counterText: React.PropTypes.string,
+	    className: React.PropTypes.string,
+	  },
+
+	  render: function () {
+	    return (
+	      React.createElement(Count, {isViewCounter: true, className: this.props.className, counterText: this.props.counterText, firebaseHost: this.props.firebaseHost})
+	    )
+	  }
+
+	});
+
+	module.exports = ViewCount;
 
 /***/ }
 /******/ ]);
