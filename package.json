@@ -21,12 +21,14 @@
     "counter",
     "firebase"
   ],
-  "devDependencies": {
-    "firebase": "^2.2.2",
-    "jsx-loader": "^0.12.2",
+  "dependecies": {
     "node-uuid": "^1.4.3",
     "react": "^0.12.2",
     "react-style": "^0.4.1",
+    "firebase": "^2.2.2"
+  },
+  "devDependencies": {
+    "jsx-loader": "^0.12.2",
     "webpack": "^1.7.2"
   },
   "author": "hashobject team (team@hashobject.com)",
