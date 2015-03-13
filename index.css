@@ -569,6 +569,6 @@ body {
   overflow-x: hidden;
 }
 
-.post{
+ul.items, .post{
   padding: 0;
 }
