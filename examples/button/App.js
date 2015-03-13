@@ -21,7 +21,7 @@ var App = React.createClass({
           </li>
           <li className="item">
             <a href="#" className="title">Single vote</a>
-            <p>Button that allows to vote/click single time. Information if button was clicked stored in the localStorage.</p>
+            <p>Button that allows to vote/click single time. Information whether the button was clicked stored in the localStorage.</p>
             <Count actionDoText="do" actionDoneText="done" counterText="kudos" firebaseHost="https://counter-button.firebaseio.com/" firebaseResourceId='kudos-counter'/>
             <div className="post">
               <pre className="brush: html">
@@ -51,7 +51,7 @@ var App = React.createClass({
           </li>
           <li className="item">
             <a href="#" className="title">OnlineCount component</a>
-            <p>OnlineCount component behaves as prebious example but has shorter syntax</p>
+            <p>OnlineCount component behaves as previous example but has more compact syntax.</p>
             <OnlineCount counterText="views" firebaseHost="https://counter-button.firebaseio.com/"/>
             <div className="post">
               <pre className="brush: html">
@@ -61,7 +61,7 @@ var App = React.createClass({
           </li>
           <li className="item">
             <a href="#" className="title">Readonly counter</a>
-            <p>Counter that cannot be updated from the UI, but can still display some data from the firebase. Can be used to build dashboards.</p>
+            <p>Counter that cannot be updated from the UI, but can still display some data from the Firebase. Can be used to build dashboards.</p>
             <Count isReadonly={true} counterText="users" firebaseHost="https://counter-button.firebaseio.com/" firebaseResourceId='kudos-counter'/>
             <div className="post">
               <pre className="brush: html">
