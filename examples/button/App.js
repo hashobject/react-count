@@ -41,6 +41,16 @@ var App = React.createClass({
             </div>
           </li>
           <li className="item">
+            <a href="#" className="title">ViewCount component</a>
+            <p>OnlineCount component behaves as previous example but has more compact syntax.</p>
+            <ViewCount counterText="views" firebaseHost="https://counter-button.firebaseio.com/" firebaseResourceId='views-counter'/>
+            <div className="post">
+              <pre className="brush: html">
+                &lt;ViewCount counterText=&quot;views&quot; firebaseHost=&quot;https://counter-button.firebaseio.com/&quot; firebaseResourceId=&#39;views-counter&#39;/&gt;
+              </pre>
+            </div>
+          </li>
+          <li className="item">
             <a href="#" className="title">Online counter</a>
             <p>Counters display number of visitors on the page at this moment.</p>
             <Count isOnlineCounter={true} counterText="views" firebaseHost="https://counter-button.firebaseio.com/"/>

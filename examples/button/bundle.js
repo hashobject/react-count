@@ -87,6 +87,16 @@
 	            )
 	          ), 
 	          React.createElement("li", {className: "item"}, 
+	            React.createElement("a", {href: "#", className: "title"}, "ViewCount component"), 
+	            React.createElement("p", null, "OnlineCount component behaves as previous example but has more compact syntax."), 
+	            React.createElement(ViewCount, {counterText: "views", firebaseHost: "https://counter-button.firebaseio.com/", firebaseResourceId: "views-counter"}), 
+	            React.createElement("div", {className: "post"}, 
+	              React.createElement("pre", {className: "brush: html"}, 
+	                "<ViewCount counterText=\"views\" firebaseHost=\"https://counter-button.firebaseio.com/\" firebaseResourceId='views-counter'/>"
+	              )
+	            )
+	          ), 
+	          React.createElement("li", {className: "item"}, 
 	            React.createElement("a", {href: "#", className: "title"}, "Online counter"), 
 	            React.createElement("p", null, "Counters display number of visitors on the page at this moment."), 
 	            React.createElement(Count, {isOnlineCounter: true, counterText: "views", firebaseHost: "https://counter-button.firebaseio.com/"}), 
