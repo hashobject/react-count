@@ -40,8 +40,8 @@ We allow incremental vote submissions:
 
 ## TODO
 
-  - [ ] betters styles customization
   - [x] implement undo
   - [x] online users counter
-  - [ ] create subcomponents
+  - [x] create subcomponents
+  - [ ] betters styles customization
   - [ ] auth support
